@@ -1,10 +1,10 @@
 [package]
-name = "webauthn-rs-core"
+name = "webauthn-rs-core-icp"
 version = "0.4.8"
-authors = ["William Brown <william@blackhats.net.au>"]
+authors = ["jonathan <jonathanxx997@gmail.com>"]
 edition = "2021"
 description = "Webauthn Cryptographic Operation Handling"
-repository = "https://github.com/kanidm/webauthn-rs"
+repository = "https://github.com/jonathanxuu/webauthn-rs-core-icp"
 readme = "README.md"
 keywords = ["webauthn", "authentication"]
 categories = ["authentication", "web-programming"]
