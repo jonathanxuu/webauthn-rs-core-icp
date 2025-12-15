@@ -634,17 +634,17 @@ impl WebauthnCore {
         }
 
         // OUT OF SPEC - Allow rejection of passkeys if desired by the caller.
-        if !experimental_allow_passkeys && credential.backup_eligible {
-            error!("Credential counter is 0 - may indicate that it is a passkey and not bound to hardware.");
-            return Err(WebauthnError::CredentialMayNotBeHardwareBound);
-        }
+        // if !experimental_allow_passkeys && credential.backup_eligible {
+        //     error!("Credential counter is 0 - may indicate that it is a passkey and not bound to hardware.");
+        //     return Err(WebauthnError::CredentialMayNotBeHardwareBound);
+        // }
 
         // OUT OF SPEC - It is invalid for a credential to indicate it is backed up
         // but not that it is elligible for backup
-        if credential.backup_state && !credential.backup_eligible {
-            error!("Credential indicates it is backed up, but has not declared valid backup elligibility");
-            return Err(WebauthnError::CredentialMayNotBeHardwareBound);
-        }
+        // if credential.backup_state && !credential.backup_eligible {
+        //     error!("Credential indicates it is backed up, but has not declared valid backup elligibility");
+        //     return Err(WebauthnError::CredentialMayNotBeHardwareBound);
+        // }
 
         // OUT OF SPEC - exclude any credential that is in our exclude list.
         let excluded = exclude_credentials
@@ -795,10 +795,10 @@ impl WebauthnCore {
 
         // OUT OF SPEC - It is invalid for a credential to indicate it is backed up
         // but not that it is elligible for backup
-        if data.authenticator_data.backup_state && !cred.backup_eligible {
-            error!("Credential indicates it is backed up, but has not declared valid backup elligibility");
-            return Err(WebauthnError::CredentialMayNotBeHardwareBound);
-        }
+        // if data.authenticator_data.backup_state && !cred.backup_eligible {
+        //     error!("Credential indicates it is backed up, but has not declared valid backup elligibility");
+        //     return Err(WebauthnError::CredentialMayNotBeHardwareBound);
+        // }
 
         // Verify that the values of the client extension outputs in clientExtensionResults and the
         // authenticator extension outputs in the extensions in authData are as expected, considering

@@ -1,6 +1,6 @@
 [package]
 name = "webauthn-rs-core-icp"
-version = "0.4.8"
+version = "0.4.9"
 authors = ["jonathan <jonathanxx997@gmail.com>"]
 edition = "2021"
 description = "Webauthn Cryptographic Operation Handling"
