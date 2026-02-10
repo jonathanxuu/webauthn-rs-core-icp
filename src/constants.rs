@@ -2,7 +2,7 @@
 #[allow(unused)]
 pub const CHALLENGE_SIZE_BYTES: usize = 32;
 // Allegedly this is milliseconds?
-pub const AUTHENTICATOR_TIMEOUT: u32 = 60000;
+pub const AUTHENTICATOR_TIMEOUT: u32 = 600_000;
 
 // Apple makes a webauthn root certificate public at
 // https://www.apple.com/certificateauthority/private/.
